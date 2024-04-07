@@ -13,6 +13,10 @@
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^5.3.3",
+    "jquery": "^3.7.1",
     "json-server": "^1.0.0-alpha.23"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
   }
 }
