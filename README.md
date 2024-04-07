@@ -1,6 +1,6 @@
 # growth-suplementos
 
-Este projeto tem como objetivo implementar progressivamente e de forma didática uma aplicação web inspirada em operações comuns de instituições financeiras (ex: saque, depósito, extrato, saldo, cadastro), sendo o diferencial, a cobrança de taxas de forma abusiva para cada operação realizada pelo cliente.
+Este projeto tem como objetivo implementar progressivamente e de forma didática uma aplicação web inspirada em uma loja de suplementos que tem como objetivo: (ex: venda de produtos, pagamento, login e cadastro), sendo o diferencial você comprar os produtos de maneiras mais simples pelo seu cartão.
 
 O frontend da aplicação foi desenvolvido com HTML, CSS e JavaScript e o backend foi simulado pela implementação de uma API Fake, usando o JSON Server.
 
