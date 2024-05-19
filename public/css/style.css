@@ -1,22 +1,73 @@
-div {
-    border: 1px solid black;
-    padding: 10px;
+:root {
+  --primary-color: #1899d5;
+  --secondary-color: #e5e5e5;
+  --accent-color: #e74c3c; /* Vermelho de destaque */
+  --background-color: #ecf0f1; /* Cor de fundo */
+  --text-color: #2c3e50; /* Cor do texto */
+  --header-color: #1abc9c; /* Cor do cabeçalho */
+  --footer-color: #34495e; /* Cor do rodapé */
+}
+
+body {
+  font-family: Arial, sans-serif;
 }
 
 header {
-    border: 1px solid blue ;
-    padding: 10px;
-
+  width: 100%;
 }
 
-section{
-    border: 1px solid yellow;
-    padding: 10px;
-
+.top-bar {
+  background-color: #000;
+  color: var(--primary-color);
+  font-weight: bold;
 }
 
-main {
-    border: 1px solid red   ;
-    padding: 10px;
+.main-bar {
+  background-color: #00a0e4;
+}
 
+.logo {
+  padding: 0.3125rem;
+}
+
+.logo img {
+  height: 2.1875rem;
+}
+
+.user-options p {
+  margin-right: 20px;
+}
+
+.cart {
+  font-size: 1.8rem;
+  color: white;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+}
+.product-item img,
+.testimonials img {
+  width: 100%;
+  height: auto;
+}
+.product-item {
+  margin-bottom: 30px;
+}
+.testimonials img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Garante que o footer fique acima de outros elementos */
 }
