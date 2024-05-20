@@ -23,6 +23,10 @@ header {
   text-align: center;
 }
 
+.navbar-edit {
+  height: 5rem;
+}
+
 .navbar-custom {
   background-color: var(--primary-color); /* Cor de fundo personalizada */
 }
