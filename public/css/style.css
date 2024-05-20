@@ -20,56 +20,43 @@ header {
   background-color: #000;
   color: var(--primary-color);
   font-weight: bold;
+  text-align: center;
 }
 
-.main-bar {
-  background-color: #00a0e4;
-  flex-direction: row;
+.navbar-custom {
+  background-color: var(--primary-color); /* Cor de fundo personalizada */
+}
+.navbar-section {
+  flex-grow: 1;
 }
 
-.logo {
-  padding: 0.3125rem;
+.navbar-section img {
+  height: 2.5rem;
+  font-style: italic;
 }
 
-.logo img {
-  height: 2.1875rem;
-}
-
-.user-options p {
-  margin-right: 20px;
-}
-
-.cad-login{
-    text-align: justify;
-    font-size: 8px;
-}
-
-.icon-user{
-    font-size: 1.25rem;
-    margin-right: .3125rem;
-}
-
-.cart {
-  margin-left: 1.875rem;
-  font-size: 1.8rem;
+.icon-nav{
+  font-size: 2.1875rem;
   color: white;
+  /* border: 1px solid black; */
 }
 
-.banner img {
-  width: 100%;
-  height: auto;
+.navbar-70 {
+  /* border: 1px solid black; */
+  flex: 0 0 80%;
 }
-.product-item img,
-.testimonials img {
-  width: 100%;
-  height: auto;
+.navbar-20 {
+  flex-wrap: wrap;
+  /* border: 1px solid black; */
+  flex: 0 0 8%; 
 }
-.product-item {
-  margin-bottom: 30px;
-}
-.testimonials img {
-  width: 50px;
-  border-radius: 50%;
+
+.navbar-10 {
+  /* border: 1px solid black; */
+  font-size: 1.875rem;
+  color: white;
+  flex: 0 0 1%;
+  padding: .625rem;
 }
 
 .footer {
