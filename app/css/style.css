@@ -53,3 +53,28 @@ header i:hover {
 
 .cartLabel {
 }
+
+.menu-list {
+  display: none;
+
+}
+
+.menu-list-items a {
+  padding: .3125rem;
+  transition: font-size 0.3s ease;
+}
+
+.menu-list-items a:hover {
+  font-size: 1.25rem;
+}
+
+
+@media (max-width: 1140px) {
+  .menu-list{
+    display: flex;
+  }
+
+  .user-menu {
+    display: none;
+  }
+}
