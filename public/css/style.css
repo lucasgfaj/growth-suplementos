@@ -16,51 +16,27 @@ header {
   width: 100%;
 }
 
+header i {
+  font-size: 30px;
+}
+
+header i:hover {
+  cursor: pointer; /* Mudar o cursor para indicar que é clicável */
+  font-size: 2.5rem;
+}
+
 .top-bar {
   background-color: #000;
   color: var(--primary-color);
-  font-weight: bold;
   text-align: center;
 }
 
-.navbar-edit {
-  height: 5rem;
+.navbar {
+  background-color: var(--primary-color);
 }
 
-.navbar-custom {
-  background-color: var(--primary-color); /* Cor de fundo personalizada */
-}
-.navbar-section {
-  flex-grow: 1;
-}
-
-.navbar-section img {
-  height: 2.5rem;
-  font-style: italic;
-}
-
-.icon-nav{
-  font-size: 2.1875rem;
-  color: white;
-  /* border: 1px solid black; */
-}
-
-.navbar-70 {
-  /* border: 1px solid black; */
-  flex: 0 0 80%;
-}
-.navbar-20 {
-  flex-wrap: wrap;
-  /* border: 1px solid black; */
-  flex: 0 0 8%; 
-}
-
-.navbar-10 {
-  /* border: 1px solid black; */
-  font-size: 1.875rem;
-  color: white;
-  flex: 0 0 1%;
-  padding: .625rem;
+.navbar img {
+  height: 50px; /* Ajuste a altura da imagem conforme necessário */
 }
 
 .footer {
@@ -73,4 +49,7 @@ header {
   left: 0;
   width: 100%;
   z-index: 1000; /* Garante que o footer fique acima de outros elementos */
+}
+
+.cartLabel {
 }
