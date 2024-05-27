@@ -1,0 +1,50 @@
+:root {
+    --primary-color: #1899d5;
+    --secondary-color: #e5e5e5;
+    --accent-color: #e74c3c; /* Vermelho de destaque */
+    --background-color: #ecf0f1; /* Cor de fundo */
+    --text-color: #2c3e50; /* Cor do texto */
+    --header-color: #1abc9c; /* Cor do cabeçalho */
+    --footer-color: #34495e; /* Cor do rodapé */
+  }  
+
+.top-bar {
+    background-color: #000;
+    color: var(--primary-color);
+    text-align: center;
+  }
+
+  header i {
+    font-size: 30px;
+  }
+  
+  header i:hover {
+    cursor: pointer; /* Mudar o cursor para indicar que é clicável */
+    font-size: 2.5rem;
+  }
+
+  .menu-list {
+    display: none;
+  
+  }
+  
+  .menu-list-items a {
+    padding: .3125rem;
+    transition: font-size 0.3s ease;
+  }
+  
+  .menu-list-items a:hover {
+    font-size: 1.25rem;
+  }
+  
+  
+  @media (max-width: 1140px) {
+    .menu-list{
+      display: flex;
+    }
+  
+    .user-menu {
+      display: none;
+    }
+  }
+  

@@ -16,21 +16,6 @@ header {
   width: 100%;
 }
 
-header i {
-  font-size: 30px;
-}
-
-header i:hover {
-  cursor: pointer; /* Mudar o cursor para indicar que é clicável */
-  font-size: 2.5rem;
-}
-
-.top-bar {
-  background-color: #000;
-  color: var(--primary-color);
-  text-align: center;
-}
-
 .navbar {
   background-color: var(--primary-color);
 }
@@ -49,32 +34,4 @@ header i:hover {
   left: 0;
   width: 100%;
   z-index: 1000; /* Garante que o footer fique acima de outros elementos */
-}
-
-.cartLabel {
-}
-
-.menu-list {
-  display: none;
-
-}
-
-.menu-list-items a {
-  padding: .3125rem;
-  transition: font-size 0.3s ease;
-}
-
-.menu-list-items a:hover {
-  font-size: 1.25rem;
-}
-
-
-@media (max-width: 1140px) {
-  .menu-list{
-    display: flex;
-  }
-
-  .user-menu {
-    display: none;
-  }
 }
