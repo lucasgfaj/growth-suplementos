@@ -23,6 +23,10 @@
     font-size: 2.5rem;
   }
 
+  .navbar img {
+    height: 50px; /* Ajuste a altura da imagem conforme necessário */
+  }
+
   .menu-list {
     display: none;
   
@@ -36,9 +40,19 @@
   .menu-list-items a:hover {
     font-size: 1.25rem;
   }
+
+  .img-desktop {
+    width: 100%;
+    object-fit: cover; /* Ajusta a imagem para cobrir o contêiner */
+  }
+
+  .img-smart {
+    display: none;
+    object-fit: cover;
+  }
+
   
-  
-  @media (max-width: 1140px) {
+  @media (max-width: 1024px) {
     .menu-list{
       display: flex;
     }
@@ -46,5 +60,16 @@
     .user-menu {
       display: none;
     }
+
+    .img-desktop{
+      display: none;
+    }
+
+    .img-smart {
+      display: flex;
+      width: 100%;
+    }
+
+    
   }
   

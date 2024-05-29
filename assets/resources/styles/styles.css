@@ -20,9 +20,6 @@ header {
   background-color: var(--primary-color);
 }
 
-.navbar img {
-  height: 50px; /* Ajuste a altura da imagem conforme necessário */
-}
 
 .footer {
   background-color: var(--primary-color);
