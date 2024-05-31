@@ -12,7 +12,7 @@
   background-color: #000;
   color: var(--primary-color);
   text-align: center;
-  height: 2.1875rem;
+  height: auto;
 }
 
 header i {
@@ -71,9 +71,29 @@ header i:hover {
   text-align: center;
 }
 
-
 .suplemento img {
   height: 12.5rem;
+}
+
+#carouselSuplementosAutoplaying {
+  margin-top: 3.125rem;
+  display: none;
+}
+
+@media (max-width: 1201px) {
+  .suplementos-div {
+    display: none;
+  }
+
+  #carouselSuplementosAutoplaying {
+    display: block;
+  }
+
+  #carouselSuplementosAutoplaying img {
+  display: block;
+  margin: auto;
+  height: 9.375rem;
+  }
 }
 
 @media (max-width: 1024px) {
