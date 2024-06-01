@@ -25,6 +25,7 @@ header {
 }
 
 .footer {
+  margin-top: 100px;
   background-color: var(--primary-color);
   color: white;
   text-align: center;

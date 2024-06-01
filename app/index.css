@@ -23,7 +23,7 @@ header i:hover {
   font-size: 2.5rem;
 }
 
-.navbar-roll{
+.navbar-roll {
   top: 0;
   position: fixed;
   width: 100%;
@@ -74,14 +74,20 @@ header i:hover {
   height: 9.375rem;
 }
 
-#carouselSuplementosAutoplaying {
+#carouselSuplementosAutoplaying,
+#carouselClientesAutoplaying {
   margin-top: 3.125rem;
   display: none;
 }
 
 .section-client {
   margin-top: 6.25rem;
-  background:  linear-gradient( white 100px, var(--primary-color) 100px, var(--primary-color) 150px, var(--primary-color) 150px); 
+  background: linear-gradient(
+    white 100px,
+    var(--primary-color) 100px,
+    var(--primary-color) 150px,
+    var(--primary-color) 150px
+  );
 }
 
 .section-client h3 {
@@ -90,25 +96,80 @@ header i:hover {
 }
 
 .stars i {
-  color: #FBCC36;
+  color: #fbcc36;
   font-size: 1.875rem;
 }
 
 .quote-double {
   font-size: 3.75rem;
-  color:  lightgray;
-
+  color: lightgray;
 }
 
 .invert-icon {
   transform: scaleX(-1);
 }
 
+.transporte-div {
+  width: 75%;
+  margin-top: 12.5rem;
+}
 
+.transporte-div img {
+  height: 12.5rem;
+}
 
-@media (max-width: 1201px) {
+.frete-gratis-div,
+.dinheiro-volta-div {
+  padding: 0px 35px;
+  background: linear-gradient(
+    white 20px,
+    #53c052 20px,
+    #53c052 180px,
+    white 20px
+  );
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
-  .cards-clientes{
+.dinheiro-volta-div {
+  background: linear-gradient(
+    white 20px,
+    var(--primary-color) 20px,
+    var(--primary-color) 180px,
+    white 20px
+  );
+}
+
+.text-container {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.text-container p {
+  margin-top: 10px;
+}
+
+.section-esportes-div img {
+  height: 25rem;
+}
+
+.section-esportes-div h5 {
+  margin-bottom: 1.875rem;
+  margin-left: 1.25rem;
+  font-size: 1.25rem;
+}
+
+@media (max-width: 1300px) {
+  .transporte-div {
+    display: none;
+  }
+
+  .cards-clientes {
     display: none;
   }
 
@@ -116,14 +177,23 @@ header i:hover {
     display: none;
   }
 
-  #carouselSuplementosAutoplaying {
+  #carouselSuplementosAutoplaying,
+  #carouselClientesAutoplaying {
     display: block;
   }
 
-  #carouselSuplementosAutoplaying img {
-  display: block;
-  margin: auto;
-  height: 9.375rem;
+  #carouselSuplementosAutoplaying,
+  #carouselClientesAutoplaying img {
+    display: block;
+    margin: auto;
+    height: 9.375rem;
+  }
+
+ .section-client {
+  height: 56.25rem;
+ }
+  .section-esportes-div {
+    display: none;
   }
 }
 
