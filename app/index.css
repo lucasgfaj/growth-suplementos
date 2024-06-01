@@ -12,7 +12,6 @@
   background-color: #000;
   color: var(--primary-color);
   text-align: center;
-  height: auto;
 }
 
 header i {
@@ -72,7 +71,7 @@ header i:hover {
 }
 
 .suplemento img {
-  height: 12.5rem;
+  height: 9.375rem;
 }
 
 #carouselSuplementosAutoplaying {
@@ -80,7 +79,39 @@ header i:hover {
   display: none;
 }
 
+.section-client {
+  margin-top: 6.25rem;
+  background:  linear-gradient( white 100px, var(--primary-color) 100px, var(--primary-color) 150px, var(--primary-color) 150px); 
+}
+
+.section-client h3 {
+  font-size: 1.875rem;
+  padding: 3.125rem;
+}
+
+.stars i {
+  color: #FBCC36;
+  font-size: 1.875rem;
+}
+
+.quote-double {
+  font-size: 3.75rem;
+  color:  lightgray;
+
+}
+
+.invert-icon {
+  transform: scaleX(-1);
+}
+
+
+
 @media (max-width: 1201px) {
+
+  .cards-clientes{
+    display: none;
+  }
+
   .suplementos-div {
     display: none;
   }
