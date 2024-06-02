@@ -1,0 +1,23 @@
+:root {
+    --primary-color: #1899d5;
+    --secondary-color: #e5e5e5;
+    --accent-color: #e74c3c; /* Vermelho de destaque */
+    --background-color: #ecf0f1; /* Cor de fundo */
+    --text-color: #2c3e50; /* Cor do texto */
+    --header-color: #1abc9c; /* Cor do cabeçalho */
+    --footer-color: #34495e; /* Cor do rodapé */
+  }
+
+  .card {
+    border: 3px solid var(--primary-color);
+  }
+
+  .container {
+    max-width: 37.5rem;
+  }
+
+  @media (max-width: 123px) {
+    .form-section {
+    width: 100%;
+    }
+  }

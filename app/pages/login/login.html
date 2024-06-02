@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <!-- Favicons -->
     <div id="favicons-placeholder"></div>
@@ -10,29 +11,62 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css"
+        rel="stylesheet">
     <!-- <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.min.css"> -->
-    <link rel="stylesheet" href="/assets/resources/styles/reset.css">
+    <!-- <link rel="stylesheet" href="/assets/resources/styles/reset.css"> -->
     <link rel="stylesheet" href="/assets/resources/styles/styles.css">
+    <link rel="stylesheet" href="./login.css">
 </head>
 
 <body>
     <!-- Cabeçalho -->
-  <header>
-    <!-- Navegação -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-            <a class="navbar-brand" href="/app/index.html">
-                <img src="/assets/resources/images/growth-logo.png" alt="Growth Supplements Logo">
-            </a>
-        </div>
-    </nav>
-    <!-- Navegação -->
-</header>
-  <!-- Cabeçalho -->
-  <!-- footer -->
-  <div id="footer-placeholder"></div>
-  <!-- footer -->
+    <header>
+        <!-- Navegação -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="/app/index.html">
+                    <img src="/assets/resources/images/growth-logo.png" alt="Growth Supplements Logo">
+                </a>
+            </div>
+        </nav>
+        <!-- Navegação -->
+    </header>
+    <!-- Cabeçalho -->
+    <!-- main  -->
+    <main>
+        <main class="">
+            <section class="form-section d-flex justify-content-center align-content-center">
+                <div class="container mt-5">
+                    <div class="card">
+                        <div class="card-header text-center">
+                        </div>
+                        <h2>Informe seu e-mail ou CPF para continuar</h2>
+                        <div class="card-body">
+                            <form>
+                                <div class="mb-3">
+                                    <!-- <label for="email" class="form-label">E-mail *</label> -->
+                                    <input type="email" class="form-control" id="email" placeholder="E-mail *" required>
+                                </div>
+                                <div class="mb-3">
+                                    <!-- <label for="senha" class="form-label">Senha *</label> -->
+                                    <input type="password" class="form-control" id="senha" placeholder="Senha *" required>
+                                </div>
+                                <button type="submit" class="btn btn-success">Cadastrar</button>
+                            </form>
+                        </div>
+                        <div class="mt-3 text-center">
+                            <p><span class="text-success">Compra 100% segura</span></p>
+                            <p>Seus dados pessoais estão protegidos, todas as informações são criptografadas para sua segurança.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    </main>
+    <!-- main -->
+    <!-- footer -->
+    <div id="footer-placeholder"></div>
+    <!-- footer -->
     <!-- Script -->
     <script src="/app/util/routers.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -41,4 +75,5 @@
     <!-- <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->
     <!-- Script -->
 </body>
+
 </html>
