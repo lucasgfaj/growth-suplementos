@@ -6,14 +6,34 @@
     --text-color: #2c3e50; /* Cor do texto */
     --header-color: #1abc9c; /* Cor do cabeçalho */
     --footer-color: #34495e; /* Cor do rodapé */
+    --sucess-color:  #2AB523;
+  }
+
+  .card-header h1 {
+    color: var(--primary-color);
+    font-size: 1.125rem;
   }
 
   .card {
     border: 3px solid var(--primary-color);
   }
 
+  .card h2 {
+    color: var(--primary-color);
+    font-size: 1.125rem;
+    padding: 1.25rem;
+  }
+
+  .form-check-input {
+    border: .125rem solid black;
+  }
+
   .container {
     max-width: 37.5rem;
+  }
+
+  .button-send {
+    background-color: var(--sucess-color);
   }
 
   @media (max-width: 123px) {
