@@ -6,6 +6,7 @@
   --text-color: #2c3e50; /* Cor do texto */
   --header-color: #1abc9c; /* Cor do cabeçalho */
   --footer-color: #34495e; /* Cor do rodapé */
+  --green-growth: #53C052;
 }
 
 .top-bar {
@@ -154,6 +155,52 @@ header i:hover {
   margin-top: 10px;
 }
 
+
+/* cards */
+
+.produtos-div{
+  margin-bottom: 6.25rem;
+}
+
+.produtos-div button {
+  width: 100%;
+  background-color: var(--green-growth);
+  border: 0;
+}
+
+.card-prod {
+  border-radius: 1.25rem; /* Adicionado border-radius */
+}
+
+.produtos-div img {
+  max-height: 12.5rem;
+  object-fit: contain;
+}
+
+.card-title-prod {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.card-text-prod {
+  color: #9C9AA0;
+  margin: 0;
+  padding: 0;
+  font-size: .875rem;
+}
+
+.price-prod {
+  font-size: 2.1875rem;
+  color: #53C052;
+  font-weight: bold;
+}
+
+.produtos-cards {
+  justify-content: center;
+}
+
+/* cards */
+
 .section-esportes-div img {
   height: 25rem;
 }
@@ -163,6 +210,7 @@ header i:hover {
   margin-left: 1.25rem;
   font-size: 1.25rem;
 }
+
 
 @media (max-width: 1300px) {
   .transporte-div {
@@ -218,6 +266,16 @@ header i:hover {
   .e-bit-div {
     font-size: 1.125rem;
   }
+
+  .carousel-clientes {
+    margin-bottom: 6.25rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .produtos-cards {
+    justify-content: start;
+  }
 }
 
 @media (max-width: 576px) {
@@ -225,3 +283,10 @@ header i:hover {
     font-size: 0.875rem;
   }
 }
+
+@media (max-width: 576px) {
+  .section-client {
+    height: 68.75rem;
+  }
+}
+
