@@ -1,23 +1,46 @@
 :root {
-    --primary-color: #1899d5;
-    --secondary-color: #e5e5e5;
-    --accent-color: #e74c3c; /* Vermelho de destaque */
-    --background-color: #ecf0f1; /* Cor de fundo */
-    --text-color: #2c3e50; /* Cor do texto */
-    --header-color: #1abc9c; /* Cor do cabeçalho */
-    --footer-color: #34495e; /* Cor do rodapé */
-  }
+  --primary-color: #1899d5;
+  --secondary-color: #e5e5e5;
+  --accent-color: #e74c3c; /* Vermelho de destaque */
+  --background-color: #ecf0f1; /* Cor de fundo */
+  --text-color: #2c3e50; /* Cor do texto */
+  --header-color: #1abc9c; /* Cor do cabeçalho */
+  --footer-color: #34495e; /* Cor do rodapé */
+  --sucess-color:  #2AB523;
+}
 
-  .card {
-    border: 3px solid var(--primary-color);
-  }
+.card-header {
+  height: 2.5rem;
+}
 
-  .container {
-    max-width: 37.5rem;
-  }
+.card {
+  border: 3px solid var(--primary-color);
+}
 
-  @media (max-width: 123px) {
-    .form-section {
-    width: 100%;
-    }
+.card h2 {
+  color: var(--primary-color);
+  font-size: 1.125rem;
+  padding: 1.25rem;
+}
+
+.form-check-input {
+  border: .125rem solid black;
+}
+
+.container {
+  max-width: 37.5rem;
+}
+
+.button-send {
+  background-color: var(--sucess-color);
+}
+
+.text-success-custom {
+  color: var(--sucess-color);
+}
+
+@media (max-width: 400px) {
+  .form-section {
+      width: 100%;
   }
+}

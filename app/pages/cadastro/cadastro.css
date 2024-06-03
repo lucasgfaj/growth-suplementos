@@ -36,8 +36,12 @@
     background-color: var(--sucess-color);
   }
 
-  @media (max-width: 123px) {
-    .form-section {
-    width: 100%;
-    }
+  .text-success-custom {
+    color: var(--sucess-color);
   }
+
+@media (max-width: 400px) {
+    .form-section {
+        width: 100%;
+    }
+}
