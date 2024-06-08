@@ -39,8 +39,24 @@
   color: var(--sucess-color);
 }
 
+
+
 @media (max-width: 400px) {
   .form-section {
       width: 100%;
   }
+}
+
+.footer {
+  /* margin-top: 100px; */
+  padding: 10px;
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  height: 3.125rem;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  position: fixed;
+  display: block;
 }

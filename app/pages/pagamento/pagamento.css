@@ -1,0 +1,145 @@
+:root {
+  --primary-color: #1899d5;
+  --secondary-color: #e5e5e5;
+  --accent-color: #e74c3c; /* Vermelho de destaque */
+  --background-color: #ecf0f1; /* Cor de fundo */
+  --text-color: #2c3e50; /* Cor do texto */
+  --header-color: #1abc9c; /* Cor do cabeçalho */
+  --footer-color: #34495e; /* Cor do rodapé */
+  --green-growth: #53c052;
+}
+
+header{
+  width: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  overflow-x: hidden; /* Impede a barra de rolagem horizontal */
+}
+
+.sucess-color {
+  color: var(--green-growth);
+}
+
+.div-comp {
+  border-radius: 0.25rem;
+  border: 0.125rem solid #e3e3e3;
+}
+
+.div-comp img {
+  background-size: cover; /* Ajusta o tamanho da imagem para cobrir todo o container */
+  background-position: center; /* Centraliza a imagem dentro do container */
+  width: 50%;
+  height: auto;
+}
+
+.image-row {
+  padding: 0.625rem;
+  border-radius: 0.25rem;
+  border: 0.125rem solid #e3e3e3;
+  height: 5.625rem;
+  margin-right: 0.3125rem;
+}
+
+.image-row img {
+  background-size: cover; /* Ajusta o tamanho da imagem para cobrir todo o container */
+  background-position: center; /* Centraliza a imagem dentro do container */
+  max-width: 100%; /* Ajuste o tamanho conforme necessário */
+  height: auto;
+  display: block;
+}
+
+.info-section p {
+  font-size: 0.75rem;
+  padding: 10px 0;
+  color: #616161;
+  align-items: center;
+}
+
+.info-section li {
+  background-color: #f1f1f1;
+  max-height: 150px;
+}
+
+.card h2 {
+  color: var(--primary-color);
+  font-size: 1.125rem;
+  padding: 0.625rem;
+}
+
+.card-resumo {
+  background: #f1f1f1;
+  padding: 1.25rem;
+}
+
+.div-credit-i {
+  /* margin-top: .625rem; */
+  font-size: 1.875rem;
+}
+
+.div-produto {
+  max-height: 7.5rem;
+  background-color: white;
+}
+
+.button-send {
+  background-color: var(--green-growth);
+}
+
+.card-body h3 {
+  color: var(--primary-color);
+  font-size: 1.25rem;
+}
+
+.voltar-carrinho {
+  color: var(--primary-color); /* Cor primária do tema */
+}
+.voltar-carrinho a {
+  text-decoration: none; /* Remove a sublinha */
+  color: var(--primary-color); /* Garante que a cor seja aplicada */
+}
+.voltar-carrinho a:hover {
+  text-decoration: underline; /* Adiciona sublinha ao passar o mouse */
+}
+
+.custom-btn {
+  padding: 1rem 1.5rem;
+  gap: 0.5rem;
+}
+
+.card {
+  height: 500px;
+  max-height: 500px;
+}
+
+.div-compra-segura,
+.div-pagamento-cartao,
+.div-resumo-compra {
+  max-width: 400px;
+}
+
+.equal-height-card {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Faz com que o corpo do card cresça para preencher o espaço disponível */
+.equal-height-card .card-body {
+  flex-grow: 1;
+}
+
+
+.footer {
+  margin-top: 3.125rem;
+  padding: .625rem;
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  height: 3.125rem;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  position:fixed;
+  display: block;
+}
