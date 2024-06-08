@@ -15,7 +15,7 @@
   }
 
   .card {
-    border: 3px solid var(--primary-color);
+    border: .1875rem solid var(--primary-color);
   }
 
   .card h2 {

@@ -52,14 +52,14 @@ body {
 
 .info-section p {
   font-size: 0.75rem;
-  padding: 10px 0;
+  padding: .625rem 0;
   color: #616161;
   align-items: center;
 }
 
 .info-section li {
   background-color: #f1f1f1;
-  max-height: 150px;
+  max-height: 9.375rem;
 }
 
 .card h2 {
@@ -109,14 +109,14 @@ body {
 }
 
 .card {
-  height: 500px;
-  max-height: 500px;
+  height: 31.25rem;
+  max-height: 31.25rem;
 }
 
 .div-compra-segura,
 .div-pagamento-cartao,
 .div-resumo-compra {
-  max-width: 400px;
+  max-width: 25rem;
 }
 
 .equal-height-card {
