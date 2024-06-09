@@ -13,7 +13,7 @@
     color: var(--primary-color);
     font-size: 1.125rem;
   }
-
+  
   .card {
     border: .1875rem solid var(--primary-color);
   }

@@ -1,59 +1,82 @@
-function submitForm() {
-    // Obter os valores dos campos do formulário
-    var emailInput = document.getElementById('email');
-    var cpfInput = document.getElementById('cpf');
-    var nomeCompletoInput = document.getElementById('nomeCompleto');
-    var dataNascimentoInput = document.getElementById('dataNascimento');
-    var telefoneCelularInput = document.getElementById('telefoneCelular');
-    var telefoneFixoInput = document.getElementById('telefoneFixo');
-    var generoInputs = document.querySelectorAll('input[name="genero"]');
-    var senhaInput = document.getElementById('senha');
-    var promocoesOfertasInput = document.getElementById('promocoesOfertas');
-    var promocoesWhatsAppInput = document.getElementById('promocoesWhatsApp');
-    var atualizacoesWhatsAppInput = document.getElementById('atualizacoesWhatsApp');
+$(document).ready(function() {
+    const formulario = $('#myForm');
 
-    // Verificar se todos os campos obrigatórios foram preenchidos
-    var isEssentialsFilled = true;
-
-    // Função para adicionar ou remover classes de validação
-    function updateValidation(inputElement, isValid) {
-        inputElement.classList.remove('is-valid', 'is-invalid');
-        if (isValid) {
-            inputElement.classList.add('is-valid');
+    // Função para mostrar mensagem de erro
+    function mostrarMensagemDeErro(campo) {
+        const spanErro = $(`#${campo.id}-error`);
+        if (spanErro.length === 0) {
+            const errorElement = $('<span>').attr('id', `${campo.id}-error`).addClass('error text-danger').text(campo.validationMessage);
+            $(campo).after(errorElement);
         } else {
-            inputElement.classList.add('is-invalid');
+            spanErro.text(campo.validationMessage);
+        }
+        $(campo).addClass('is-invalid');
+    }
+
+    // Função para salvar os dados no JSON Server
+    async function salvarDadosNoServidor(dados) {
+        try {
+            const response = await fetch('http://localhost:3000/cadastros', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(dados)
+            });
+            return response.ok;
+        } catch (error) {
+            console.error('Erro ao salvar os dados:', error);
+            return false;
         }
     }
 
-    // Função para verificar se o campo está preenchido
-    function validateField(inputElement) {
-        var value = inputElement.value.trim();
-        if (value === '') {
-            isEssentialsFilled = false;
-            updateValidation(inputElement, false);
-        } else {
-            updateValidation(inputElement, true);
+    // Evento de submit do formulário
+    formulario.on('submit', async function(event) {
+        event.preventDefault(); // Evitar envio do formulário
+
+        const nome = $('#nomeCompleto')[0];
+        const email = $('#email')[0];
+        const cpf = $('#cpf')[0];
+        const dataNascimento = $('#dataNascimento')[0];
+        const telefoneCelular = $('#telefoneCelular')[0];
+        const telefoneFixo = $('#telefoneFixo')[0]; // Novo campo
+        const promocoesWhatsApp = $('#promocoesWhatsApp')[0]; // Novo campo
+        const atualizacoesWhatsApp = $('#atualizacoesWhatsApp')[0]; // Novo campo
+        const genero = $('input[name="genero"]:checked')[0]; // Novo campo
+        const senha = $('#senha')[0];
+
+        if (!formulario[0].checkValidity()) {
+            // Se o formulário não for válido, exibir mensagens de erro
+            mostrarMensagemDeErro(nome);
+            mostrarMensagemDeErro(email);
+            mostrarMensagemDeErro(cpf);
+            mostrarMensagemDeErro(dataNascimento);
+            mostrarMensagemDeErro(telefoneCelular);
+            mostrarMensagemDeErro(telefoneFixo); // Validar campo opcional
+            mostrarMensagemDeErro(senha);
+            return;
         }
-    }
 
-    // Validação dos campos essenciais
-    validateField(emailInput);
-    validateField(cpfInput);
-    validateField(nomeCompletoInput);
-    validateField(telefoneCelularInput);
-    validateField(dataNascimentoInput);
-    validateField(senhaInput);
+        // Criar objeto com os dados do formulário
+        const dadosFormulario = {
+            nome: nome.value,
+            email: email.value,
+            cpf: cpf.value,
+            dataNascimento: dataNascimento.value,
+            telefoneCelular: telefoneCelular.value,
+            telefoneFixo: telefoneFixo.value, // Novo campo
+            promocoesWhatsApp: promocoesWhatsApp.checked, // Novo campo
+            atualizacoesWhatsApp: atualizacoesWhatsApp.checked, // Novo campo
+            genero: genero.value, // Novo campo
+            senha: senha.value
+        };
 
-    // Verificar se os campos de checkbox estão marcados
-    if (!promocoesOfertasInput.checked || !promocoesWhatsAppInput.checked || !atualizacoesWhatsAppInput.checked) {
-        isEssentialsFilled = false;
-    }
-
-    // Se todos os campos essenciais foram preenchidos, permitir o envio do formulário
-    if (isEssentialsFilled) {
-        // Restante do código de envio do formulário...
-        alert('Campos essenciais preenchidos. Enviando formulário...');
-    } else {
-        alert('Por favor, preencha todos os campos obrigatórios.');
-    }
-}
+        // Tentar salvar os dados no JSON Server
+        const sucesso = await salvarDadosNoServidor(dadosFormulario);
+        if (sucesso) {
+            window.location.href = '../login/login.html'; // Redirecionar para a página de login
+        } else {
+            console.error('Erro ao realizar o cadastro. Tente novamente.');
+        }
+    });
+});

@@ -21,6 +21,10 @@ header {
   width: 100%;
 }
 
+.img-growth {
+  margin-right: 5.625rem;
+}
+
 .navbar {
   background-color: var(--primary-color);
 }

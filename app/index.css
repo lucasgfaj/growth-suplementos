@@ -56,6 +56,10 @@ header i:hover {
   font-size: 1.25rem;
 }
 
+.e-bit-div img {
+  height: 5.625rem;
+}
+
 .suplementos-div {
   margin-top: 5.625rem;
 }
@@ -66,17 +70,17 @@ header i:hover {
 }
 
 .suplemento img {
-  height: 9.375rem;
+  height: 6.25rem;
 }
 
 #carouselSuplementosAutoplaying,
 #carouselClientesAutoplaying {
-  margin-top: 3.125rem;
+  margin-top: 1.875rem;
   display: none;
 }
 
 .section-client {
-  margin-top: 6.25rem;
+  margin-top: .625rem;
   background: linear-gradient(
     white 6.25rem,
     var(--primary-color) 6.25rem,
@@ -86,17 +90,17 @@ header i:hover {
 }
 
 .section-client h3 {
-  font-size: 1.875rem;
-  padding: 3.125rem;
+  font-size: 1.375rem;
+  padding: 1.875rem;
 }
 
 .stars i {
   color: #fbcc36;
-  font-size: 1.875rem;
+  font-size: 1.25rem;
 }
 
 .quote-double {
-  font-size: 3.75rem;
+  font-size: 2.5rem;
   color: lightgray;
 }
 
@@ -106,7 +110,7 @@ header i:hover {
 
 .transporte-div {
   width: 75%;
-  margin-top: 12.5rem;
+  margin-top: 9.375rem;
 }
 
 .transporte-div img {
@@ -201,7 +205,7 @@ header i:hover {
 /* cards */
 
 .section-esportes-div img {
-  height: 18.75rem;
+  height: 25rem;
 }
 
 .section-esportes-div h5 {
