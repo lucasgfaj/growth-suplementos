@@ -40,10 +40,12 @@
     color: var(--sucess-color);
   }
 
-@media (max-width: 400px) {
-    .form-section {
-        width: 100%;
-    }
+  .valido {
+    border: 1px solid green;
+}
+
+.invalido {
+    border: 1px solid red;
 }
 
 .footer {
@@ -58,4 +60,10 @@
   width: 100%;
   position:static;
   display: block;
+}
+
+@media (max-width: 400px) {
+    .form-section {
+        width: 100%;
+    }
 }
