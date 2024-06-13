@@ -1,16 +1,19 @@
-$(document).ready(function() {
-    const formulario = $('#myForm');
+document.addEventListener('DOMContentLoaded', function() {
+    const formulario = document.getElementById('myForm');
 
     // Função para mostrar mensagem de erro
     function mostrarMensagemDeErro(campo) {
-        const spanErro = $(`#${campo.id}-error`);
-        if (spanErro.length === 0) {
-            const errorElement = $('<span>').attr('id', `${campo.id}-error`).addClass('error text-danger').text(campo.validationMessage);
-            $(campo).after(errorElement);
+        const spanErro = document.getElementById(`${campo.id}-error`);
+        if (!spanErro) {
+            const errorElement = document.createElement('span');
+            errorElement.id = `${campo.id}-error`;
+            errorElement.classList.add('error', 'text-danger');
+            errorElement.textContent = campo.validationMessage;
+            campo.parentNode.insertBefore(errorElement, campo.nextSibling);
         } else {
-            spanErro.text(campo.validationMessage);
+            spanErro.textContent = campo.validationMessage;
         }
-        $(campo).addClass('is-invalid');
+        campo.classList.add('is-invalid');
     }
 
     // Função para salvar os dados no JSON Server
@@ -31,28 +34,28 @@ $(document).ready(function() {
     }
 
     // Evento de submit do formulário
-    formulario.on('submit', async function(event) {
+    formulario.addEventListener('submit', async function(event) {
         event.preventDefault(); // Evitar envio do formulário
 
-        const nome = $('#nomeCompleto')[0];
-        const email = $('#email')[0];
-        const cpf = $('#cpf')[0];
-        const dataNascimento = $('#dataNascimento')[0];
-        const telefoneCelular = $('#telefoneCelular')[0];
-        const telefoneFixo = $('#telefoneFixo')[0]; // Novo campo
-        const promocoesWhatsApp = $('#promocoesWhatsApp')[0]; // Novo campo
-        const atualizacoesWhatsApp = $('#atualizacoesWhatsApp')[0]; // Novo campo
-        const genero = $('input[name="genero"]:checked')[0]; // Novo campo
-        const senha = $('#senha')[0];
+        const nome = document.getElementById('nomeCompleto');
+        const email = document.getElementById('email');
+        const cpf = document.getElementById('cpf');
+        const dataNascimento = document.getElementById('dataNascimento');
+        const telefoneCelular = document.getElementById('telefoneCelular');
+        const telefoneFixo = document.getElementById('telefoneFixo'); // Novo campo
+        const promocoesWhatsApp = document.getElementById('promocoesWhatsApp'); // Novo campo
+        const atualizacoesWhatsApp = document.getElementById('atualizacoesWhatsApp'); // Novo campo
+        const genero = document.querySelector('input[name="genero"]:checked'); // Novo campo
+        const senha = document.getElementById('senha');
 
-        if (!formulario[0].checkValidity()) {
+        if (!formulario.checkValidity()) {
             // Se o formulário não for válido, exibir mensagens de erro
             mostrarMensagemDeErro(nome);
             mostrarMensagemDeErro(email);
             mostrarMensagemDeErro(cpf);
             mostrarMensagemDeErro(dataNascimento);
             mostrarMensagemDeErro(telefoneCelular);
-            mostrarMensagemDeErro(telefoneFixo); // Validar campo opcional
+            if (telefoneFixo) mostrarMensagemDeErro(telefoneFixo); // Validar campo opcional
             mostrarMensagemDeErro(senha);
             return;
         }
@@ -64,17 +67,17 @@ $(document).ready(function() {
             cpf: cpf.value,
             dataNascimento: dataNascimento.value,
             telefoneCelular: telefoneCelular.value,
-            telefoneFixo: telefoneFixo.value, // Novo campo
+            telefoneFixo: telefoneFixo ? telefoneFixo.value : null, // Novo campo
             promocoesWhatsApp: promocoesWhatsApp.checked, // Novo campo
             atualizacoesWhatsApp: atualizacoesWhatsApp.checked, // Novo campo
-            genero: genero.value, // Novo campo
+            genero: genero ? genero.value : null, // Novo campo
             senha: senha.value
         };
 
         // Tentar salvar os dados no JSON Server
         const sucesso = await salvarDadosNoServidor(dadosFormulario);
         if (sucesso) {
-            window.location.href = '../login/login.html'; // Redirecionar para a página de login
+            window.location.href = '/app/pages/login/login.html'; // Redirecionar para a página de login
         } else {
             console.error('Erro ao realizar o cadastro. Tente novamente.');
         }

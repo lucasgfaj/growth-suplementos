@@ -1,0 +1,43 @@
+{
+  "cadastros": [
+    {
+      "id": "e110",
+      "nome": "Lucas Gontarz fajardo",
+      "email": "lucasgfajardo09@gmail.com",
+      "cpf": "110.487.139-46",
+      "dataNascimento": "2004-09-05",
+      "telefoneCelular": "42988687949",
+      "telefoneFixo": "",
+      "promocoesWhatsApp": true,
+      "atualizacoesWhatsApp": true,
+      "genero": "masculino",
+      "senha": "123456789"
+    },
+    {
+      "id": "fb8c",
+      "nome": "Lucas",
+      "email": "lucasgontarzfajardo@hotmail.com",
+      "cpf": "110.487.139-46",
+      "dataNascimento": "2003-05-09",
+      "telefoneCelular": "85321321321",
+      "telefoneFixo": "",
+      "promocoesWhatsApp": true,
+      "atualizacoesWhatsApp": true,
+      "genero": "masculino",
+      "senha": "1234567890"
+    },
+    {
+      "id": "b7d7",
+      "nome": "Lucas Fajardo",
+      "email": "lucasdapaz@fajardo.com.br",
+      "cpf": "110.487.139-46",
+      "dataNascimento": "2001-05-09",
+      "telefoneCelular": "32994124123",
+      "telefoneFixo": "",
+      "promocoesWhatsApp": true,
+      "atualizacoesWhatsApp": true,
+      "genero": "masculino",
+      "senha": "21812831232131"
+    }
+  ]
+}

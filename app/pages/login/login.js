@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
         // Obter os dados dos usuários do arquivo JSON
-        $.getJSON('/app/util/db.json', function (data) {
+        $.getJSON('/server/db.json', function (data) {
             const cadastros = data.cadastros;
             // Verificar se o usuário existe com o email e senha fornecidos
             const usuario = cadastros.find(function (user) {
