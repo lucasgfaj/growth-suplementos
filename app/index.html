@@ -70,8 +70,11 @@
         </h5>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
-      <div class="offcanvas-body">
-        <!-- Insira o conteúdo aqui -->
+      <div class="offcanvas-body" id="cart-items">
+        <!-- Conteúdo do carrinho será inserido aqui -->
+      </div>
+      <div class="offcanvas-footer p-3">
+        <a href="/app/pages/pagamento/pagamento.html"><button class="btn btn-primary w-100" id="checkout-button">Ir para o pagamento</button></a>
       </div>
     </div>
     <!-- Side-Bar do Carrinho -->
@@ -465,35 +468,35 @@
     </section>
     <!-- section transporte -->
 
-      <!-- section produtos -->
-      <section class="produtos-div">
-        <div class="container mt-5">
-            <h2 class="text-center mt-5 mb-4">Produtos</h2>
+    <!-- section produtos -->
+    <section class="produtos-div">
+      <div class="container mt-5">
+        <h2 class="text-center mt-5 mb-4">Produtos</h2>
 
-            <!-- Seção Suplementos aminoácidos -->
-            <h2 class="text-center mt-5 mb-4">Suplementos aminoácidos</h2>
-            <div class="row produtos-cards" id="suplementos-aminoacidos"></div>
+        <!-- Seção Suplementos aminoácidos -->
+        <h2 class="text-center mt-5 mb-4">Suplementos aminoácidos</h2>
+        <div class="row produtos-cards" id="suplementos-aminoacidos"></div>
 
-            <!-- Seção Suplementos proteínas -->
-            <h2 class="text-center mt-5 mb-4">Suplementos proteínas</h2>
-            <div class="row produtos-cards" id="suplementos-proteinas"></div>
+        <!-- Seção Suplementos proteínas -->
+        <h2 class="text-center mt-5 mb-4">Suplementos proteínas</h2>
+        <div class="row produtos-cards" id="suplementos-proteinas"></div>
 
-            <!-- Seção Suplementos massa muscular -->
-            <h2 class="text-center mt-5 mb-4">Suplementos massa muscular</h2>
-            <div class="row produtos-cards" id="suplementos-massa-muscular"></div>
+        <!-- Seção Suplementos massa muscular -->
+        <h2 class="text-center mt-5 mb-4">Suplementos massa muscular</h2>
+        <div class="row produtos-cards" id="suplementos-massa-muscular"></div>
 
-            <!-- Seção Suplementos vitaminas -->
-            <h2 class="text-center mt-5 mb-4">Suplementos vitaminas</h2>
-            <div class="row produtos-cards" id="suplementos-vitaminas"></div>
+        <!-- Seção Suplementos vitaminas -->
+        <h2 class="text-center mt-5 mb-4">Suplementos vitaminas</h2>
+        <div class="row produtos-cards" id="suplementos-vitaminas"></div>
 
-            <!-- Seção Suplementos emagrecimento -->
-            <h2 class="text-center mt-5 mb-4">Suplementos emagrecimento</h2>
-            <div class="row produtos-cards" id="suplementos-emagrecimento"></div>
+        <!-- Seção Suplementos emagrecimento -->
+        <h2 class="text-center mt-5 mb-4">Suplementos emagrecimento</h2>
+        <div class="row produtos-cards" id="suplementos-emagrecimento"></div>
 
-        </div>
+      </div>
     </section>
     <!-- section produtos -->
-     
+
     <!-- section suplementos necessarios para o seu esporte -->
     <section class="section-esportes-div">
       <div class="align-content-center">

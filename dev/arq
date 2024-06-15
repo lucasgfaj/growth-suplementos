@@ -59,7 +59,12 @@ async function fetchProducts(url, options, containerId, limit) {
 }
 
 function addToCart(product) {
-  cart.push(product);
+  const productInCart = cart.find(item => item.id === product.id);
+  if (productInCart) {
+    productInCart.quantity += 1;
+  } else {
+    cart.push(product);
+  }
   updateCart();
 }
 
@@ -69,7 +74,7 @@ function updateCart() {
 
   let total = 0;
 
-  cart.forEach((product, index) => {
+  cart.forEach(product => {
     total += parseFloat(product.price.replace('R$', '').replace(',', '.')) * product.quantity;
     const cartItem = document.createElement("div");
     cartItem.classList.add("cart-item");
@@ -82,8 +87,8 @@ function updateCart() {
         </div>
       </div>
       <div class="cart-item-controls">
-        <button class="btn btn-sm btn-danger me-2 remove-btn" data-product-index="${index}">Excluir</button>
-        <input type="number" class="form-control form-control-sm quantity-input" data-product-index="${index}" value="${product.quantity}" min="1">
+        <button class="btn btn-sm btn-danger me-2 remove-btn" data-product-id="${product.id}">Excluir</button>
+        <input type="number" class="form-control form-control-sm quantity-input" data-product-id="${product.id}" value="${product.quantity}" min="1">
       </div>
     `;
     cartItemsContainer.appendChild(cartItem);
@@ -97,30 +102,49 @@ function updateCart() {
   `;
   cartItemsContainer.appendChild(totalContainer);
 
+  // Adicionando botão "Ir para pagamento"
+  const paymentButton = document.createElement("button");
+  paymentButton.classList.add("btn", "btn-success", "mt-3");
+  paymentButton.innerText = "Ir para pagamento";
+  paymentButton.addEventListener('click', () => {
+    window.location.href = `/app/pages/pagamento/pagamento.html?total=${total.toFixed(2).replace('.', ',')}&cart=${encodeURIComponent(JSON.stringify(cart))}`;
+  });
+  cartItemsContainer.appendChild(paymentButton);
+
   document.querySelectorAll('.remove-btn').forEach(button => {
     button.addEventListener('click', (e) => {
-      removeFromCart(e.target.dataset.productIndex);
+      removeFromCart(e.target.dataset.productId);
     });
   });
 
   document.querySelectorAll('.quantity-input').forEach(input => {
     input.addEventListener('change', (e) => {
-      updateQuantity(e.target.dataset.productIndex, e.target.value);
+      updateQuantity(e.target.dataset.productId, e.target.value);
     });
   });
 
-  const cartCanvas = new bootstrap.Offcanvas(document.getElementById('cart-canvas'));
-  cartCanvas.show();
+  const cartCanvas = bootstrap.Offcanvas.getInstance(document.getElementById('cart-canvas'));
+  if (!cartCanvas) {
+    new bootstrap.Offcanvas(document.getElementById('cart-canvas')).show();
+  } else {
+    cartCanvas.show();
+  }
 }
 
-function removeFromCart(productIndex) {
-  cart.splice(productIndex, 1);
-  updateCart();
+function removeFromCart(productId) {
+  const productIndex = cart.findIndex(item => item.id === productId);
+  if (productIndex > -1) {
+    cart.splice(productIndex, 1);
+    updateCart();
+  }
 }
 
-function updateQuantity(productIndex, quantity) {
-  cart[productIndex].quantity = parseInt(quantity);
-  updateCart();
+function updateQuantity(productId, quantity) {
+  const product = cart.find(item => item.id === productId);
+  if (product) {
+    product.quantity = parseInt(quantity);
+    updateCart();
+  }
 }
 
 // Defina o número máximo de cartões por sessão
