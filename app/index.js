@@ -1,11 +1,12 @@
-const baseUrl = 'https://real-time-amazon-data.p.rapidapi.com/search?query=suplementos&page=1&country=BR&sort_by=RELEVANCE&product_condition=ALL';
+const baseUrl = 'https://real-time-amazon-data.p.rapidapi.com/search?query=Suplementos&page=1&country=BR&sort_by=RELEVANCE&product_condition=ALL';
 const options = {
-  method: 'GET',
-  headers: {
-    'x-rapidapi-key': 'b41f5c9d43msh1a33ee9822ff38bp1be284jsnc3b2d908851c',
-    'x-rapidapi-host': 'real-time-amazon-data.p.rapidapi.com'
-  }
+	method: 'GET',
+	headers: {
+		'x-rapidapi-key': '6ea9dfeb0fmsh60f28134da6ac2dp1873cejsn40101bd324ba',
+		'x-rapidapi-host': 'real-time-amazon-data.p.rapidapi.com'
+	}
 };
+
 const cart = [];
 
 async function fetchProducts(url, options, containerId, limit) {
@@ -62,7 +63,6 @@ function addToCart(product) {
   cart.push(product);
   updateCart();
 }
-
 function updateCart() {
   const cartItemsContainer = document.getElementById("cart-items");
   cartItemsContainer.innerHTML = "";
@@ -89,6 +89,9 @@ function updateCart() {
     cartItemsContainer.appendChild(cartItem);
   });
 
+  // Salva o subtotal no localStorage
+  localStorage.setItem('subtotal', total.toFixed(2));
+
   const totalContainer = document.createElement("div");
   totalContainer.classList.add("d-flex", "justify-content-between", "fw-bold");
   totalContainer.innerHTML = `
@@ -112,7 +115,6 @@ function updateCart() {
   const cartCanvas = new bootstrap.Offcanvas(document.getElementById('cart-canvas'));
   cartCanvas.show();
 }
-
 function removeFromCart(productIndex) {
   cart.splice(productIndex, 1);
   updateCart();

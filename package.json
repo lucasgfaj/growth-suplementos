@@ -16,7 +16,8 @@
     "bootstrap": "5.3",
     "bootstrap-icons": "^1.11.3",
     "jquery": "^3.7.1",
-    "json-server": "^1.0.0-alpha.23"
+    "json-server": "^1.0.0-alpha.23",
+    "sweetalert2": "^11.11.1"
   },
   "devDependencies": {
     "gh-pages": "^6.1.1"
