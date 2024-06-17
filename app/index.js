@@ -2,10 +2,11 @@ const baseUrl = 'https://real-time-amazon-data.p.rapidapi.com/search?query=Suple
 const options = {
 	method: 'GET',
 	headers: {
-		'x-rapidapi-key': '6ea9dfeb0fmsh60f28134da6ac2dp1873cejsn40101bd324ba',
+		'x-rapidapi-key': '217025f371mshe93d39f1579dbf7p1caa32jsn425aa44278d5',
 		'x-rapidapi-host': 'real-time-amazon-data.p.rapidapi.com'
 	}
 };
+
 
 const cart = [];
 
