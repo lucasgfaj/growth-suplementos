@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', function () {
             if (usuario) {
                 // Login bem-sucedido, redirecionar para a página principal
                 window.location.href = '/app/index.html';
-                alert('Login bem-sucedido! Bem-vindo de volta.');
             } else {
                 // Exibir mensagem de erro de login
                 alert('E-mail ou senha inválidos. Por favor, tente novamente.');

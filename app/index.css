@@ -162,6 +162,7 @@ header i:hover {
 /* cards */
 
 .produtos-div{
+  width: 100%;
   margin-bottom: 6.25rem;
 }
 
@@ -172,6 +173,8 @@ header i:hover {
 }
 
 .card-prod {
+  width: 100%;
+
   border-radius: 1.25rem; /* Adicionado border-radius */
 }
 

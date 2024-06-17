@@ -1,11 +1,11 @@
-const baseUrl = 'https://real-time-amazon-data.p.rapidapi.com/search?query=Suplementos&page=1&country=BR&sort_by=RELEVANCE&product_condition=ALL';
-const options = {
-	method: 'GET',
-	headers: {
-		'x-rapidapi-key': '217025f371mshe93d39f1579dbf7p1caa32jsn425aa44278d5',
-		'x-rapidapi-host': 'real-time-amazon-data.p.rapidapi.com'
-	}
-};
+//  const baseUrl = 'https://real-time-amazon-data.p.rapidapi.com/search?query=Suplementos&page=1&country=BR&sort_by=RELEVANCE&product_condition=ALL';
+//  const options = {
+//  	method: 'GET',
+//  	headers: {
+//  		'x-rapidapi-key': '217025f371mshe93d39f1579dbf7p1caa32jsn425aa44278d5',
+//  		'x-rapidapi-host': 'real-time-amazon-data.p.rapidapi.com'
+//  	}
+//  };
 
 
 const cart = [];
