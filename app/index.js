@@ -1,12 +1,11 @@
-//  const baseUrl = 'https://real-time-amazon-data.p.rapidapi.com/search?query=Suplementos&page=1&country=BR&sort_by=RELEVANCE&product_condition=ALL';
-//  const options = {
-//  	method: 'GET',
-//  	headers: {
-//  		'x-rapidapi-key': '217025f371mshe93d39f1579dbf7p1caa32jsn425aa44278d5',
-//  		'x-rapidapi-host': 'real-time-amazon-data.p.rapidapi.com'
-//  	}
-//  };
-
+  const baseUrl = 'https://real-time-amazon-data.p.rapidapi.com/search?query=Suplementos&page=1&country=BR&sort_by=RELEVANCE&product_condition=ALL';
+  const options = {
+ 	method: 'GET',
+ 	headers: {
+ 		'x-rapidapi-key': 'd4cc5cdd18msh4666ae7a6bda313p157b32jsne288596a8bc6',
+ 		'x-rapidapi-host': 'real-time-amazon-data.p.rapidapi.com'
+ 	}
+ };
 
 const cart = [];
 
@@ -61,9 +60,17 @@ async function fetchProducts(url, options, containerId, limit) {
 }
 
 function addToCart(product) {
-  cart.push(product);
+  const existingProductIndex = cart.findIndex(item => item.id === product.id);
+
+  if (existingProductIndex > -1) {
+    cart[existingProductIndex].quantity += 1;
+  } else {
+    cart.push(product);
+  }
+
   updateCart();
 }
+
 function updateCart() {
   const cartItemsContainer = document.getElementById("cart-items");
   cartItemsContainer.innerHTML = "";
@@ -113,9 +120,13 @@ function updateCart() {
     });
   });
 
-  const cartCanvas = new bootstrap.Offcanvas(document.getElementById('cart-canvas'));
-  cartCanvas.show();
+  // Garantir que o offcanvas só seja exibido uma vez e não interfira na exibição da tela
+  if (!document.getElementById('cart-canvas').classList.contains('show')) {
+    const cartCanvas = new bootstrap.Offcanvas(document.getElementById('cart-canvas'));
+    cartCanvas.show();
+  }
 }
+
 function removeFromCart(productIndex) {
   cart.splice(productIndex, 1);
   updateCart();
