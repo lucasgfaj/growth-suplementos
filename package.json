@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "json-server": "json-server --watch server/db.json"
   },
   "author": "",
   "license": "ISC",
