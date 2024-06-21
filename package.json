@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "json-server": "json-server --watch server/db.json"
+    "json:server": "json-server --watch server/db.json"
   },
   "author": "",
   "license": "ISC",
