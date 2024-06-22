@@ -2,12 +2,22 @@
   "name": "growth-suplementos",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
+    "start": "parcel app/index.html",
+    "build:parcel": "parcel build app/index.html --public-url /growth-suplementos",
+    "build": "npm run clean:windows && npm run build:parcel",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "clean:linux": "rm -rf dist/*",
+    "clean:windows": "rd /s/q dist",
     "json:server": "json-server --watch server/db.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucasgfaj/growth-suplementos.git"
   },
   "author": "",
   "license": "ISC",
@@ -17,9 +27,10 @@
     "bootstrap-icons": "^1.11.3",
     "jquery": "^3.7.1",
     "json-server": "^1.0.0-alpha.23",
-    "sweetalert2": "^11.11.1"
+    "sweetalert2": "^11.12.0"
   },
   "devDependencies": {
-    "gh-pages": "^6.1.1"
+    "gh-pages": "^6.1.1",
+    "parcel": "^2.12.0"
   }
 }
