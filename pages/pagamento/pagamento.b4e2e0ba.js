@@ -1,0 +1,2 @@
+document.addEventListener("DOMContentLoaded",function(){let e=localStorage.getItem("subtotal");null!==e&&(document.querySelector(".subtotal-value").innerText=`R$ ${e.replace(".",",")}`),document.getElementById("mensagem").addEventListener("click",function(){Swal.fire({icon:"success",title:"Compra Realizada com Sucesso!",showConfirmButton:!1,timer:1500,timerProgressBar:!0,didClose:()=>{window.location.href="/app/index.html"}})})}),window.addEventListener("beforeunload",function(){localStorage.removeItem("subtotal")});
+//# sourceMappingURL=pagamento.b4e2e0ba.js.map
