@@ -2,7 +2,7 @@
 // const options = {
 // 	method: 'GET',
 // 	headers: {
-// 		'x-rapidapi-key': '85fdc2806cmsh055f6bb467f9ff6p18b3bfjsnc43d7b4c190b',
+// 		'x-rapidapi-key': 'f6d871feafmshb56dceaa494e6eap1e494fjsn1a5a5dc538f7',
 // 		'x-rapidapi-host': 'real-time-amazon-data.p.rapidapi.com'
 // 	}
 // };

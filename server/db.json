@@ -38,6 +38,19 @@
       "atualizacoesWhatsApp": true,
       "genero": "masculino",
       "senha": "21812831232131"
+    },
+    {
+      "id": "5411",
+      "nome": "Lucas Gontarz fajardo",
+      "email": "lucasgfajardo09@gmail.com",
+      "cpf": "110.487.139-42",
+      "dataNascimento": "2004-09-05",
+      "telefoneCelular": "32131232132",
+      "telefoneFixo": "",
+      "promocoesWhatsApp": true,
+      "atualizacoesWhatsApp": true,
+      "genero": "masculino",
+      "senha": "123456"
     }
   ]
 }

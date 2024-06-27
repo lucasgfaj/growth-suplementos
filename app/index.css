@@ -316,21 +316,32 @@ header i:hover {
   }
 }
 
+@media (max-width: 1200px){
+  .section-client {
+    margin-top: 100px;
+  }
+  
+}
+
 @media (max-width: 767px) {
   .produtos-cards {
     justify-content: start;
   }
+
+   .section-client {
+    margin-top: 100px;
+  }
+  
 }
 
-@media (max-width: 576px) {
-  .e-bit-div {
-    font-size: 0.875rem;
-  }
-}
 
 @media (max-width: 576px) {
   .section-client {
+    margin-top: 100px;
     height: 68.75rem;
+  }
+  .e-bit-div {
+    font-size: 0.875rem;
   }
 }
 
